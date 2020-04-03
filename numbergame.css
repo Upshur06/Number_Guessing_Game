@@ -1,1 +1,32 @@
+*{
+  margin: 0;
+}
 
+h5{
+  margin: 2% 40%;
+  font-size: 18px;
+  color: #117D11;
+}
+#menuContainer{
+margin: 10% 25%;
+border: 6px solid #117D11;
+width: 53%;
+
+}
+
+#menuContainer > h2{
+  font-size: 50px;
+  letter-spacing: 10px;
+  text-align: justify;
+}
+
+
+#menuContainer > h2,h3,h4{
+  text-align: center;
+  margin-top: 30px;
+}
+
+#holder{
+  width: 80%;
+  margin: 5% 10%;
+}
