@@ -7,6 +7,7 @@ h5{
   font-size: 18px;
   color: #117D11;
 }
+
 #menuContainer{
 margin: 10% 25%;
 border: 6px solid #117D11;
@@ -24,6 +25,11 @@ width: 53%;
 #menuContainer > h2,h3,h4{
   text-align: center;
   margin-top: 30px;
+}
+
+h4:hover{
+  text-decoration: underline;
+  font-size: 25px;
 }
 
 #holder{
@@ -51,20 +57,4 @@ width: 53%;
 
 #thinkingFace{
   border: 2px solid;
-}
-
-#easyInput{
-  border: 2px solid;
-  width: 150px;
-  height: 60px;
-
-}
-
-#easyBtn{
-  border: 2px solid purple;
-  width: 250px;
-  height: 65px;
-  font-size: 45px;
-  display: inline;
-
 }
