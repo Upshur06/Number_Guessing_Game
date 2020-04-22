@@ -18,20 +18,35 @@
 }
 
 #rightTalkBubble{
-  transform: scaleX(-1);
+  /* transform: scaleX(-1); */
 }
 
 #proudEmoji{
-  border: 2px solid;
+  /* border: 2px solid; */
   width: 200px;
   display: inline-block;
 }
 
 
+
+#sadFace{
+    visibility: hidden;
+}
+
+#happyFace, #thumbsUp{
+    visibility: hidden;
+}
+
+#thumbsUp{
+    visibility: hidden;
+    visibility:
+}
 #easyInput{
   border: 2px solid;
   width: 150px;
   height: 60px;
+  text-align: center;
+  font-size: 35px;
 }
 
 #easyBtn{
@@ -51,4 +66,13 @@ h5{
 h5:hover{
     text-decoration: underline;
     font-size: 25px;
+}
+
+#randomNumber{
+  border: 4px solid green;
+  padding-top: 12px;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  font-size: 35px;
 }
