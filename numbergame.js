@@ -7,14 +7,12 @@ var happyFace = document.getElementById('happyFace');
 var thumbsUp = document.getElementById('thumbsUp');
 var thinkingFace = document.getElementById('thinkingFace');
 var randomNumber = document.getElementById('randomNumber');
+var numberToGuessEM = 0;
 
 function easyModeRandomNum(max){
-    var number = Math.floor(Math.random() * Math.floor(max))+1;
-    // console.log(number);
+    var number = parseInt(Math.floor(Math.random() * Math.floor(max))+1);
     randomNumber.innerHTML = number;
-
-    // console.log("Number is " + typeof number);
-    // console.log("easyInput is " + typeof parseInt(easyInput.value));
+    numberToGuessEM = number;
 }
 
 function thoughtBubble(){
@@ -47,29 +45,19 @@ function rightChoiceBubble(){
 
 
 
-
-
 easyBtn.addEventListener("click", function(){
-
-  if(easyInput.value != randomNumber.value){
+  if(parseInt(easyInput.value) === numberToGuessEM){
+    quoteBubble.style.backgroundImage = "none";
+    rightChoiceBubble();
+    console.log("That is Correct");
+  } else {
     quoteBubble.style.backgroundImage = "none";
     wrongChoiceBubble();
     console.log("Sorry, That is Incorrect");
   }
-  if(easyInput.value === randomNumber.value){
-    quoteBubble.style.backgroundImage = "none";
-    rightChoiceBubble();
-    console.log("That is Correct");
-  }
-  console.log("randomNumber is " + typeof randomNumber.value);
-  console.log("easyInput is " + typeof parseInt(easyInput.value));
+
+  console.log("numberToGuessEM is " + numberToGuessEM);
+  console.log("easyInput is " + parseInt(easyInput.value));
 })
 
-// easyBtn.addEventListener("mouseover", function(){
-//     quoteBubble.style.backgroundImage = "none";
-//     rightChoiceBubble();
-//     console.log(easyInput.value);
-// })
-
 thoughtBubble();
-// easyModeRandomNum(30);
