@@ -17,47 +17,42 @@ function easyModeRandomNum(max){
 
 function thoughtBubble(){
   easyModeRandomNum(30);
-  quoteBubble.style.backgroundImage = "url('./Images_Folder/Right_Speach_Bubble_icon.png')";
-  quoteBubble.style.backgroundRepeat = "no-repeat";
-  quoteBubble.style.transform = "scaleX(-1)";
-  thinkingFace.style.visibility = "visible";
+  quoteBubble.classList.add('originalTalkBubble');
 }
 
 function wrongChoiceBubble(){
-  quoteBubble.style.backgroundImage = "url('./Images_Folder/Left_Speach_Bubble_icon.png')";
-  quoteBubble.style.backgroundRepeat = "no-repeat";
-  quoteBubble.style.transform = "none";
-  thinkingFace.style.visibility = "hidden";
-  happyFace.style.visibility = "hidden";
-  thumbsUp.style.visibility = "hidden";
-  sadFace.style.visibility = "visible";
+  setTimeout(function(){
+    quoteBubble.classList.replace('originalTalkBubble', 'wrongAnswerBubble');
+    sadFace.style.visibility = "visible";
+    thinkingFace.style.visibility = "hidden";
+    happyFace.style.visibility = "hidden";
+    thumbsUp.style.visibility = "hidden";
+    console.log("Sorry, That is Incorrect");
+    console.log("numberToGuessEM is " + numberToGuessEM);
+    console.log("easyInput is " + parseInt(easyInput.value));
+  },600);
 }
 
 function rightChoiceBubble(){
-  quoteBubble.style.backgroundImage = "url('./Images_Folder/Middle_Speach_Bubble_icon.png')";
-  quoteBubble.style.backgroundRepeat = "no-repeat";
-  quoteBubble.style.transform = "none";
-  sadFace.style.visibility = "hidden";
-  thinkingFace.style.visibility = "hidden";
-  happyFace.style.visibility = "visible";
-  thumbsUp.style.visibility = "visible";
+
+  setTimeout(function(){
+    quoteBubble.classList.replace('wrongAnswerBubble', 'rightAnswerBubble');
+    sadFace.style.visibility = "hidden";
+    thinkingFace.style.visibility = "hidden";
+    happyFace.style.visibility = "visible";
+    thumbsUp.style.visibility = "visible";
+    console.log("That is Correct");
+    console.log("numberToGuessEM is " + numberToGuessEM);
+    console.log("easyInput is " + parseInt(easyInput.value));
+  },600);
 }
-
-
 
 easyBtn.addEventListener("click", function(){
   if(parseInt(easyInput.value) === numberToGuessEM){
-    quoteBubble.style.backgroundImage = "none";
     rightChoiceBubble();
-    console.log("That is Correct");
   } else {
-    quoteBubble.style.backgroundImage = "none";
     wrongChoiceBubble();
-    console.log("Sorry, That is Incorrect");
   }
-
-  console.log("numberToGuessEM is " + numberToGuessEM);
-  console.log("easyInput is " + parseInt(easyInput.value));
 })
 
 thoughtBubble();

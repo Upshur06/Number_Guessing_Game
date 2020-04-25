@@ -3,12 +3,13 @@
   box-sizing: border-box;
 }
 
+
 #container > h1{
-  text-align: center;
+  text-align: left;
 }
 
 #easyInstruction > p{
-  text-align: center;
+  text-align: left;
 }
 
 #quoteBubble{
@@ -17,12 +18,29 @@
   height: 505px;
 }
 
-#rightTalkBubble{
-  /* transform: scaleX(-1); */
+.originalTalkBubble{
+  background-image: url('./Images_Folder/Right_Speach_Bubble_icon.png');
+  background-repeat:no-repeat;
+  transform: scaleX(-1);
 }
 
+.wrongAnswerBubble{
+  background-image: url('./Images_Folder/Left_Speach_Bubble_icon.png');
+  background-repeat: no-repeat;
+  transform: none;
+}
+
+
+.rightAnswerBubble{
+  background-image: url('./Images_Folder/Middle_Speach_Bubble_icon.png');
+  background-repeat:no-repeat;
+  transform: none;
+}
+
+
+
 #proudEmoji{
-  /* border: 2px solid; */
+
   width: 200px;
   display: inline-block;
 }
