@@ -1,17 +1,21 @@
 
-var quoteBubble = document.getElementById('quoteBubble');
-var easyBtn = document.getElementById('easyBtn');
-var easyInput = document.getElementById('easyInput');
-var sadFace = document.getElementById('sadFace');
-var happyFace = document.getElementById('happyFace');
-var thumbsUp = document.getElementById('thumbsUp');
-var thinkingFace = document.getElementById('thinkingFace');
-var randomNumber = document.getElementById('randomNumber');
-var numberToGuessEM = 0;
+let quoteBubble = document.getElementById('quoteBubble');
+let easyBtn = document.getElementById('easyBtn');
+let easyInput = document.getElementById('easyInput');
+let sadFace = document.getElementById('sadFace');
+let happyFace = document.getElementById('happyFace');
+let thumbsUp = document.getElementById('thumbsUp');
+let thinkingFace = document.getElementById('thinkingFace');
+let randomNumber = document.getElementById('randomNumber');
+let numberToGuessEM = 0;
+let counter = document.getElementById('counter');
+let countDown = 5;
+
+
 
 function easyModeRandomNum(max){
     var number = parseInt(Math.floor(Math.random() * Math.floor(max))+1);
-    randomNumber.innerHTML = number;
+    // randomNumber.innerHTML = number;
     numberToGuessEM = number;
 }
 
@@ -34,7 +38,6 @@ function wrongChoiceBubble(){
 }
 
 function rightChoiceBubble(){
-
   setTimeout(function(){
     quoteBubble.classList.replace('wrongAnswerBubble', 'rightAnswerBubble');
     sadFace.style.visibility = "hidden";
@@ -47,12 +50,28 @@ function rightChoiceBubble(){
   },600);
 }
 
-easyBtn.addEventListener("click", function(){
-  if(parseInt(easyInput.value) === numberToGuessEM){
-    rightChoiceBubble();
-  } else {
-    wrongChoiceBubble();
-  }
-})
+
+
+function countingDown(){
+  easyBtn.addEventListener("click", function(){
+    if(parseInt(easyInput.value) !== numberToGuessEM){
+      wrongChoiceBubble();
+      console.log(countDown-=1);
+      counter.innerHTML = countDown;
+    }
+    if(countDown === 0){
+      console.log(countDown-=0);
+      console.log("GameOver the correct number is: " + numberToGuessEM);
+      randomNumber.innerHTML = "GameOver the correct number is: " + numberToGuessEM;
+      easyBtn.disabled = true;
+      easyInput.disabled = true;
+    }
+    if(parseInt(easyInput.value) === numberToGuessEM){
+      rightChoiceBubble();
+    }
+  })
+}
+
 
 thoughtBubble();
+countingDown();
