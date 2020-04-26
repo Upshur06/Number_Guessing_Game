@@ -15,15 +15,10 @@
           <h1>Instructions</h1>
 
           <div id="easyInstruction">
-            <p>`I'm thinking of a number between <em id="easyNum1">number 1</em> and <em    id="easyNum2">number 2</em>. Can you guess what number it is?`
-            </p>
+            <p>I'm thinking of a number between 1 and 30. Can you guess what number it is?</p>
           </div>
 
           <div id="quoteBubble" onload="thoughtBubble()"></div>
-
-          <!-- <img id="leftTalkBubble" src="./Images_Folder/Left_Speach_Bubble_icon.png">
-          <img id="rightTalkBubble" src="./Images_Folder/Right_Speach_Bubble_icon.png">
-          <img id="middleTalkBubble" src="./Images_Folder/Middle_Speach_Bubble_icon.png"> -->
 
           <div id=emojiFaces>
             <img id="sadFace" src="./Images_Folder/Sad_face_icon.png">
@@ -34,8 +29,7 @@
             <img id="thinkingFace" src="./Images_Folder/Thinking_face_icon.png">
           </div>
 
-          <!-- <div id="counter"></div> -->
-          <h2>You will have <div id="counter">5</div> turns to find the correct answer</h2>
+          <h2>You will have <em id="counter">5</em> turns to find the correct answer</h2>
 
           <input id="easyInput" type="number">
           <button id="easyBtn" type="button">Guess</button>
@@ -45,6 +39,7 @@
           <h5 type="button" onClick="location.href='menu.html'" value="click here">Main Menu</h5>
 
           <div id="randomNumber" type="number"></div>
+
       </div>
     </div>
     <script src="numbergame.js"></script>

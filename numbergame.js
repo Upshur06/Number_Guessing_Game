@@ -7,15 +7,14 @@ let happyFace = document.getElementById('happyFace');
 let thumbsUp = document.getElementById('thumbsUp');
 let thinkingFace = document.getElementById('thinkingFace');
 let randomNumber = document.getElementById('randomNumber');
+let bubbleStatement = document.querySelector('p');
 let numberToGuessEM = 0;
 let counter = document.getElementById('counter');
 let countDown = 5;
 
 
-
 function easyModeRandomNum(max){
     var number = parseInt(Math.floor(Math.random() * Math.floor(max))+1);
-    // randomNumber.innerHTML = number;
     numberToGuessEM = number;
 }
 
@@ -31,7 +30,7 @@ function wrongChoiceBubble(){
     thinkingFace.style.visibility = "hidden";
     happyFace.style.visibility = "hidden";
     thumbsUp.style.visibility = "hidden";
-    console.log("Sorry, That is Incorrect");
+    bubbleStatement.innerHTML = "Sorry, That is Incorrect. Try Again!!!";
     console.log("numberToGuessEM is " + numberToGuessEM);
     console.log("easyInput is " + parseInt(easyInput.value));
   },600);
@@ -44,12 +43,14 @@ function rightChoiceBubble(){
     thinkingFace.style.visibility = "hidden";
     happyFace.style.visibility = "visible";
     thumbsUp.style.visibility = "visible";
-    console.log("That is Correct");
+    bubbleStatement.innerHTML = "That is Correct";
+    easyBtn.disabled = true;
+    easyInput.disabled = true;
+    randomNumber.innerHTML = "Congrats,....You Won";
     console.log("numberToGuessEM is " + numberToGuessEM);
     console.log("easyInput is " + parseInt(easyInput.value));
   },600);
 }
-
 
 
 function countingDown(){

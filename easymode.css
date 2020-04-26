@@ -3,7 +3,6 @@
   box-sizing: border-box;
 }
 
-
 #container > h1{
   text-align: left;
 }
@@ -30,14 +29,11 @@
   transform: none;
 }
 
-
 .rightAnswerBubble{
   background-image: url('./Images_Folder/Middle_Speach_Bubble_icon.png');
   background-repeat:no-repeat;
   transform: none;
 }
-
-
 
 #proudEmoji{
   width: 200px;
@@ -75,10 +71,11 @@
 }
 
 #counter{
-  /* border: 2px solid orange; */
   width: 30px;
   height: 40px;
   padding-left: 6px;
+  font-family: sans-serif;
+  font-weight: 800;
   color: green;
   font-size: 30px;
   display: inline-block;
