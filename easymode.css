@@ -3,6 +3,17 @@
   box-sizing: border-box;
 }
 
+#container{
+  border: 2px solid;
+  width: 98%;
+
+}
+
+#secondContainer{
+  width: 60%;
+  margin-left: 10%;
+}
+
 #container > h1{
   text-align: left;
 }
@@ -12,48 +23,72 @@
 }
 
 #quoteBubble{
-  border: 2px solid;
-  width: 516px;
-  height: 505px;
+  /* border: 2px solid; */
+  width: 100%;
+  height: 32em;
 }
 
 .originalTalkBubble{
   background-image: url('./Images_Folder/Right_Speach_Bubble_icon.png');
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   transform: scaleX(-1);
 }
 
 .wrongAnswerBubble{
   background-image: url('./Images_Folder/Left_Speach_Bubble_icon.png');
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   transform: none;
 }
 
 .rightAnswerBubble{
   background-image: url('./Images_Folder/Middle_Speach_Bubble_icon.png');
   background-repeat:no-repeat;
+  background-position: center;
+  background-size: contain;
   transform: none;
 }
-
-#proudEmoji{
-  width: 200px;
-  display: inline-block;
-}
-
 
 
 #sadFace{
     visibility: hidden;
+    margin-left: 10%;
+    width: 21%;
+    height: auto;
+    position: relative;
+    bottom: 19px;
 }
 
-#happyFace, #thumbsUp{
+#happyFace{
     visibility: hidden;
+    margin-left: 7%;
+    width: 21%;
+    height: auto;
+    position: relative;
+    bottom: 19px;
 }
 
 #thumbsUp{
     visibility: hidden;
-    visibility:
+    margin-left: 1%;
+    width: 9%;
+    height: auto;
+    position: relative;
+    bottom: 20px;
 }
+
+#thinkingFace{
+    visibility: visible;
+    margin-left: 4%;
+    width: 21%;
+    height: auto;
+    position: relative;
+    bottom: 19px;
+}
+
 #easyInput{
   border: 2px solid;
   width: 150px;
@@ -95,7 +130,7 @@ h5:hover{
 #randomNumber{
   border: 4px solid green;
   padding-top: 12px;
-  width: 670px;
+  width: 570px;
   height: 70px;
   text-align: center;
   font-size: 35px;

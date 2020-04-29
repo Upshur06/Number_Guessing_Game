@@ -30,7 +30,7 @@ function wrongChoiceBubble(){
     thinkingFace.style.visibility = "hidden";
     happyFace.style.visibility = "hidden";
     thumbsUp.style.visibility = "hidden";
-    bubbleStatement.innerHTML = "Sorry, That is Incorrect. Try Again!!!";
+    bubbleStatement.textContent = "Sorry, That is Incorrect. Try Again!!!";
     console.log("numberToGuessEM is " + numberToGuessEM);
     console.log("easyInput is " + parseInt(easyInput.value));
   },600);
@@ -43,10 +43,10 @@ function rightChoiceBubble(){
     thinkingFace.style.visibility = "hidden";
     happyFace.style.visibility = "visible";
     thumbsUp.style.visibility = "visible";
-    bubbleStatement.innerHTML = "That is Correct";
+    bubbleStatement.textContent = "That is Correct";
     easyBtn.disabled = true;
     easyInput.disabled = true;
-    randomNumber.innerHTML = "Congrats,....You Won";
+    randomNumber.textContent = "Congrats,....You Won";
     console.log("numberToGuessEM is " + numberToGuessEM);
     console.log("easyInput is " + parseInt(easyInput.value));
   },600);
@@ -58,12 +58,12 @@ function countingDown(){
     if(parseInt(easyInput.value) !== numberToGuessEM){
       wrongChoiceBubble();
       console.log(countDown-=1);
-      counter.innerHTML = countDown;
+      counter.textContent = countDown;
     }
     if(countDown === 0){
       console.log(countDown-=0);
       console.log("GameOver the correct number is: " + numberToGuessEM);
-      randomNumber.innerHTML = "GameOver the correct number is: " + numberToGuessEM;
+      randomNumber.textContent = "GameOver the correct number is: " + numberToGuessEM;
       easyBtn.disabled = true;
       easyInput.disabled = true;
     }
