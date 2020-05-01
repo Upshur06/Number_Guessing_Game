@@ -29,6 +29,7 @@ width: 53%;
 h4:hover{
   text-decoration: underline;
   font-size: 25px;
+  cursor: pointer;
 }
 
 #holder{

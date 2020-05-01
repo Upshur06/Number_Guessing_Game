@@ -6,20 +6,26 @@
 #container{
   border: 2px solid;
   width: 98%;
-
+  margin-left: 1%;
 }
 
 #secondContainer{
   width: 60%;
-  margin-left: 10%;
+  margin-left: 20%;
+  position: relative;
+  bottom: 150px;
 }
 
 #container > h1{
-  text-align: left;
+  text-align: center;
 }
 
 #easyInstruction > p{
-  text-align: left;
+  text-align: center;
+  font-size: 34px;
+  font-family: fantasy;
+  position: relative;
+  top: 170px;
 }
 
 #quoteBubble{
@@ -41,6 +47,7 @@
   background-position: center;
   background-size: contain;
   transform: none;
+
 }
 
 .rightAnswerBubble{
@@ -49,8 +56,8 @@
   background-position: center;
   background-size: contain;
   transform: none;
-}
 
+}
 
 #sadFace{
     visibility: hidden;
@@ -102,6 +109,7 @@
   height: 65px;
   font-size: 45px;
   display: inline;
+  cursor: pointer;
 }
 
 #counter{
@@ -116,14 +124,17 @@
 }
 
 h5{
-  margin: 2% 40%;
-  font-size: 18px;
+  text-align: center;
+  font-size: 30px;
   color: #117D11;
+  cursor: pointer;
+  position: relative;
+  bottom: 30px;
 }
 
 h5:hover{
     text-decoration: underline;
-    font-size: 25px;
+    font-size: 37px;
 }
 
 #randomNumber{
@@ -133,4 +144,24 @@ h5:hover{
   height: 70px;
   text-align: center;
   font-size: 35px;
+  position: relative;
+  left: 29%;
+  bottom: 660px;
+}
+
+h2, #message{
+  text-align: center;
+  position: relative;
+  bottom: 150px;
+}
+
+#message{
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+#easyInput, #easyBtn{
+  position: relative;
+  left: 36%;
+  bottom: 150px;
 }
