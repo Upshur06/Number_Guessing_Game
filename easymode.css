@@ -38,7 +38,7 @@
 
 #quouteBubbleText{
   position: relative;
-  bottom: 70px;
+  bottom: 30px;
   font-size: 30px;
   text-align: center;
 }
@@ -149,10 +149,11 @@ h5:hover{
   height: 70px;
   text-align: center;
   font-size: 35px;
-  position: absolute;
-  left: 22%;
-  bottom: 660px;
-  top: 240px;
+  position: relative;
+  bottom: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
