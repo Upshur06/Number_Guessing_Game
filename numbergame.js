@@ -7,7 +7,7 @@ let happyFace = document.getElementById('happyFace');
 let thumbsUp = document.getElementById('thumbsUp');
 let thinkingFace = document.getElementById('thinkingFace');
 let randomNumber = document.getElementById('randomNumber');
-let bubbleStatement = document.querySelector('p');
+let bubbleStatement = document.getElementById('quouteBubbleText');
 let numberToGuessEM = 0;
 let counter = document.getElementById('counter');
 let countDown = 5;
@@ -72,7 +72,6 @@ function countingDown(){
     }
   })
 }
-
 
 thoughtBubble();
 countingDown();
