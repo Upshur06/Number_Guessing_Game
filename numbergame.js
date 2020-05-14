@@ -6,7 +6,7 @@ let sadFace = document.getElementById('sadFace');
 let happyFace = document.getElementById('happyFace');
 let thumbsUp = document.getElementById('thumbsUp');
 let thinkingFace = document.getElementById('thinkingFace');
-let randomNumber = document.getElementById('randomNumber');
+let endGameAlert = document.getElementById('endGameAlert');
 let bubbleStatement = document.getElementById('quouteBubbleText');
 let numberToGuessEM = 0;
 let counter = document.getElementById('counter');
@@ -46,7 +46,7 @@ function rightChoiceBubble(){
     bubbleStatement.textContent = "That is Correct";
     easyBtn.disabled = true;
     easyInput.disabled = true;
-    randomNumber.textContent = "Congrats,....You Won";
+    endGameAlert.textContent = "Congrats,....You Won";
     console.log("numberToGuessEM is " + numberToGuessEM);
     console.log("easyInput is " + parseInt(easyInput.value));
   },600);
@@ -63,7 +63,7 @@ function countingDown(){
     if(countDown === 0){
       console.log(countDown-=0);
       console.log("GameOver the correct number is: " + numberToGuessEM);
-      randomNumber.textContent = "GameOver the correct number is: " + numberToGuessEM;
+      endGameAlert.textContent = "GameOver the correct number is: " + numberToGuessEM;
       easyBtn.disabled = true;
       easyInput.disabled = true;
     }
