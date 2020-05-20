@@ -47,7 +47,7 @@
 #quouteBubbleText{
   position: relative;
   bottom: 30px;
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
 }
 
@@ -80,7 +80,7 @@
     width: 21%;
     height: auto;
     position: relative;
-    bottom: 19px;
+    bottom: 25px;
 }
 
 #happyFace{
@@ -89,7 +89,7 @@
     width: 21%;
     height: auto;
     position: relative;
-    bottom: 19px;
+    bottom: 25px;
 }
 
 #thumbsUp{
@@ -107,7 +107,7 @@
     width: 21%;
     height: auto;
     position: relative;
-    bottom: 19px;
+    bottom: 25px;
 }
 
 #easyInput{
@@ -177,7 +177,7 @@ h5:hover{
   text-align: center;
 }
 
-@media all and (max-width: 590px){
+@media screen and (max-width: 590px){
   #quouteBubbleText{
     position: relative;
     bottom: 10px;
@@ -186,13 +186,12 @@ h5:hover{
   }
 
   #secondContainer{
-    border: solid green;
     width: 80%;
     margin-left: 10%;
   }
 
   #sadFace{
-      visibility: visible;
+      visibility: hidden;
       margin-left: .5%;
       width: 28%;
       height: auto;
@@ -201,7 +200,7 @@ h5:hover{
   }
 
   #happyFace{
-      visibility: visible;
+      visibility: hidden;
       margin-left: 3%;
       width: 28%;
       height: auto;
@@ -210,7 +209,7 @@ h5:hover{
   }
 
   #thumbsUp{
-      visibility: visible;
+      visibility: hidden;
       margin-left: .3%;
       width: 9%;
       height: auto;
@@ -225,5 +224,75 @@ h5:hover{
       height: auto;
       position: relative;
       bottom: 19px;
+  }
+}
+
+
+@media screen and (max-width: 375px){
+  #wrapper{
+    width: 375px;
+  }
+
+  #quouteBubbleText{
+    position: relative;
+    bottom: 10px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  #secondContainer{
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  #sadFace{
+      visibility: hidden;
+      margin-left: 1%;
+      width: 27%;
+      height: auto;
+      position: relative;
+      bottom: 20px;
+  }
+
+  #happyFace{
+      visibility: hidden;
+      margin-left: 3%;
+      width: 27%;
+      height: auto;
+      position: relative;
+      bottom: 20px;
+  }
+
+  #thumbsUp{
+      visibility: hidden;
+      margin-left: .5%;
+      width: 9%;
+      height: auto;
+      position: relative;
+      bottom: 22px;
+  }
+
+  #thinkingFace{
+      visibility: visible;
+      margin-left: 1%;
+      width: 27%;
+      height: auto;
+      position: relative;
+      bottom: 20px;
+  }
+
+  #easyBtn{
+    border: 2px solid purple;
+    width: 250px;
+    height: 65px;
+    font-size: 45px;
+    margin-top: 10px;
+    display: inline;
+    cursor: pointer;
+  }
+
+  .bottomContainer > h2{
+    font-size: 30px;
+    padding-bottom: 15px;
   }
 }
