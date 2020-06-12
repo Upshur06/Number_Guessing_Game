@@ -46,10 +46,15 @@
 
 #quouteBubbleText{
   position: relative;
-  bottom: 30px;
-  font-size: 40px;
+  bottom: 55px;
+  left: 6px;
+  font-size: 6.5vh;
+  font-size: 2.9vw;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 
 .originalTalkBubble{
   background-image: url('./Images_Folder/Right_Speach_Bubble_icon.png');
@@ -161,10 +166,11 @@ h5:hover{
   text-align: center;
   font-size: 35px;
   position: relative;
-  bottom: 120px;
+  bottom: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
+  visibility: hidden;
 }
 
 #message{
@@ -177,54 +183,33 @@ h5:hover{
   text-align: center;
 }
 
+#restart{
+  border: 3px solid;
+  background-color: blue;
+  color: white;
+  width: 100px;
+  position: absolute;
+  left: 1300px;
+}
+
+@media screen and (max-width: 900px){
+  /* #quouteBubbleText{
+    position: relative;
+    bottom: 35px;
+    color: green;
+    font-size: 30px;
+    text-align: center;
+  } */
+
+}
+
 @media screen and (max-width: 590px){
   #quouteBubbleText{
     position: relative;
-    bottom: 10px;
-    font-size: 35px;
+    bottom: 35px;
     text-align: center;
   }
 
-  #secondContainer{
-    width: 80%;
-    margin-left: 10%;
-  }
-
-  #sadFace{
-      visibility: hidden;
-      margin-left: .5%;
-      width: 28%;
-      height: auto;
-      position: relative;
-      bottom: 19px;
-  }
-
-  #happyFace{
-      visibility: hidden;
-      margin-left: 3%;
-      width: 28%;
-      height: auto;
-      position: relative;
-      bottom: 19px;
-  }
-
-  #thumbsUp{
-      visibility: hidden;
-      margin-left: .3%;
-      width: 9%;
-      height: auto;
-      position: relative;
-      bottom: 20px;
-  }
-
-  #thinkingFace{
-      visibility: visible;
-      margin-left: .5%;
-      width: 28%;
-      height: auto;
-      position: relative;
-      bottom: 19px;
-  }
 }
 
 
@@ -235,50 +220,8 @@ h5:hover{
 
   #quouteBubbleText{
     position: relative;
-    bottom: 10px;
-    font-size: 30px;
+    bottom: 30px;
     text-align: center;
-  }
-
-  #secondContainer{
-    width: 90%;
-    margin-left: 5%;
-  }
-
-  #sadFace{
-      visibility: hidden;
-      margin-left: 1%;
-      width: 27%;
-      height: auto;
-      position: relative;
-      bottom: 20px;
-  }
-
-  #happyFace{
-      visibility: hidden;
-      margin-left: 3%;
-      width: 27%;
-      height: auto;
-      position: relative;
-      bottom: 20px;
-  }
-
-  #thumbsUp{
-      visibility: hidden;
-      margin-left: .5%;
-      width: 9%;
-      height: auto;
-      position: relative;
-      bottom: 22px;
-  }
-
-  #thinkingFace{
-      visibility: visible;
-      margin-left: 1%;
-      width: 27%;
-      height: auto;
-      position: relative;
-      bottom: 20px;
   }
 
   #easyBtn{
