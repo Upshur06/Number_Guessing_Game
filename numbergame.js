@@ -8,6 +8,7 @@ let thumbsUp = document.getElementById('thumbsUp');
 let thinkingFace = document.getElementById('thinkingFace');
 let endGameAlert = document.getElementById('endGameAlert');
 let bubbleStatement = document.getElementById('quouteBubbleText');
+let restart = document.getElementById('restart');
 let numberToGuessEM = 0;
 let counter = document.getElementById('counter');
 let countDown = 5;
@@ -31,6 +32,7 @@ function wrongChoiceBubble(){
     happyFace.style.visibility = "hidden";
     thumbsUp.style.visibility = "hidden";
     bubbleStatement.textContent = "Sorry, That is Incorrect. Try Again!!!";
+    easyInput.value = "";
     console.log("numberToGuessEM is " + numberToGuessEM);
     console.log("easyInput is " + parseInt(easyInput.value));
   },600);
@@ -47,6 +49,7 @@ function rightChoiceBubble(){
     easyBtn.disabled = true;
     easyInput.disabled = true;
     endGameAlert.textContent = "Congrats,....You Won";
+    restart.style.visibility = "visible";
     console.log("numberToGuessEM is " + numberToGuessEM);
     console.log("easyInput is " + parseInt(easyInput.value));
   },600);
@@ -68,6 +71,7 @@ function countingDown(){
       endGameAlert.textContent = "GameOver the correct number is: " + numberToGuessEM;
       easyBtn.disabled = true;
       easyInput.disabled = true;
+      restart.style.visibility = "visible";
     }
     if(parseInt(easyInput.value) === numberToGuessEM){
       rightChoiceBubble();
@@ -75,9 +79,21 @@ function countingDown(){
   })
 }
 
-function restart(){
+function startOver(){
+  easyModeRandomNum(30);
+  quoteBubble.classList.add('originalTalkBubble');
+  sadFace.style.visibility = "hidden";
+  thinkingFace.style.visibility = "visible";
+  happyFace.style.visibility = "hidden";
+  thumbsUp.style.visibility = "hidden";
 
+  bubbleStatement.style.visibility = "visible";
+  endGameAlert.style.visibility = "hidden";
+  easyBtn.disabled = false;
+  easyInput.disabled = false;
+  restart.style.visibility = "hidden";
 }
 
 thoughtBubble();
 countingDown();
+// startOver();
