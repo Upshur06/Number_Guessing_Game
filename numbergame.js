@@ -22,6 +22,10 @@ function easyModeRandomNum(max){
 function thoughtBubble(){
   easyModeRandomNum(30);
   quoteBubble.classList.add('originalTalkBubble');
+  bubbleStatement.innerHTML = "I'm thinking of a" + "<br>";
+  bubbleStatement.innerHTML += "number between 1 and 30" + "<br />";
+  bubbleStatement.innerHTML += "Can you guess what" + "<br />";
+  bubbleStatement.innerHTML += "number it is???";
 }
 
 function wrongChoiceBubble(){
@@ -31,10 +35,11 @@ function wrongChoiceBubble(){
     thinkingFace.style.visibility = "hidden";
     happyFace.style.visibility = "hidden";
     thumbsUp.style.visibility = "hidden";
-    bubbleStatement.textContent = "Sorry, That is Incorrect. Try Again!!!";
-    easyInput.value = "";
+    bubbleStatement.innerHTML = "Sorry, That is Incorrect." + "<br />";
+    bubbleStatement.innerHTML += "Try Again!!!";
     console.log("numberToGuessEM is " + numberToGuessEM);
     console.log("easyInput is " + parseInt(easyInput.value));
+    easyInput.value = "";
   },600);
 }
 
@@ -73,27 +78,30 @@ function countingDown(){
       easyInput.disabled = true;
       restart.style.visibility = "visible";
     }
-    if(parseInt(easyInput.value) === numberToGuessEM){
-      rightChoiceBubble();
-    }
+      (parseInt(easyInput.value) === numberToGuessEM) ? rightChoiceBubble():0;
+
+    // if(parseInt(easyInput.value) === numberToGuessEM){
+    //   rightChoiceBubble();
+    // }
   })
 }
 
 function startOver(){
-  easyModeRandomNum(30);
-  quoteBubble.classList.add('originalTalkBubble');
+  quoteBubble.classList.replace('rightAnswerBubble','originalTalkBubble');
   sadFace.style.visibility = "hidden";
   thinkingFace.style.visibility = "visible";
   happyFace.style.visibility = "hidden";
   thumbsUp.style.visibility = "hidden";
-
   bubbleStatement.style.visibility = "visible";
   endGameAlert.style.visibility = "hidden";
+  restart.style.visibility = "hidden";
+  counter.innerHTML = 5;
   easyBtn.disabled = false;
   easyInput.disabled = false;
-  restart.style.visibility = "hidden";
+  easyInput.value = "";
+
 }
 
 thoughtBubble();
 countingDown();
-// startOver();
+startOver();
