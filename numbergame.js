@@ -53,41 +53,40 @@ function rightChoiceBubble(){
     bubbleStatement.textContent = "That is Correct";
     easyBtn.disabled = true;
     easyInput.disabled = true;
-    endGameAlert.textContent = "Congrats,....You Won";
+    endGameAlert.innerHTML = "Congrats,....You Won";
     restart.style.visibility = "visible";
     console.log("numberToGuessEM is " + numberToGuessEM);
     console.log("easyInput is " + parseInt(easyInput.value));
   },600);
 }
 
-
 function countingDown(){
   easyBtn.addEventListener("click", function(){
-    if(parseInt(easyInput.value) !== numberToGuessEM){
-      wrongChoiceBubble();
-      console.log(countDown-=1);
-      counter.textContent = countDown;
-    }
+    (parseInt(easyInput.value) !== numberToGuessEM) ?
+         (wrongChoiceBubble(),
+          console.log(countDown-=1),
+          counter.innerHTML = countDown) :
+    (parseInt(easyInput.value) === numberToGuessEM) ? rightChoiceBubble():0;
     if(countDown === 0){
       console.log(countDown-=0);
       console.log("GameOver the correct number is: " + numberToGuessEM);
       bubbleStatement.style.visibility = "hidden";
       endGameAlert.style.visibility = "visible";
-      endGameAlert.textContent = "GameOver the correct number is: " + numberToGuessEM;
+      endGameAlert.innerHTML  = "GameOver the correct number is: " + numberToGuessEM;
       easyBtn.disabled = true;
       easyInput.disabled = true;
       restart.style.visibility = "visible";
     }
-      (parseInt(easyInput.value) === numberToGuessEM) ? rightChoiceBubble():0;
-
-    // if(parseInt(easyInput.value) === numberToGuessEM){
-    //   rightChoiceBubble();
-    // }
   })
 }
 
 function startOver(){
   quoteBubble.classList.replace('rightAnswerBubble','originalTalkBubble');
+  quoteBubble.classList.replace('wrongAnswerBubble','originalTalkBubble');
+  bubbleStatement.innerHTML = "I'm thinking of a" + "<br>";
+  bubbleStatement.innerHTML += "number between 1 and 30" + "<br />";
+  bubbleStatement.innerHTML += "Can you guess what" + "<br />";
+  bubbleStatement.innerHTML += "number it is???";
   sadFace.style.visibility = "hidden";
   thinkingFace.style.visibility = "visible";
   happyFace.style.visibility = "hidden";
@@ -99,7 +98,6 @@ function startOver(){
   easyBtn.disabled = false;
   easyInput.disabled = false;
   easyInput.value = "";
-
 }
 
 thoughtBubble();
