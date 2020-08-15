@@ -1,4 +1,3 @@
-
 let quoteBubble = document.getElementById('quoteBubble');
 let easyBtn = document.getElementById('easyBtn');
 let easyInput = document.getElementById('easyInput');
@@ -26,6 +25,7 @@ function thoughtBubble(){
   bubbleStatement.innerHTML += "number between 1 and 30" + "<br />";
   bubbleStatement.innerHTML += "Can you guess what" + "<br />";
   bubbleStatement.innerHTML += "number it is???";
+  counter.innerHTML = countDown;
 }
 
 function wrongChoiceBubble(){
@@ -69,6 +69,7 @@ function countingDown(){
     (parseInt(easyInput.value) === numberToGuessEM) ? rightChoiceBubble():0;
     if(countDown === 0){
       console.log(countDown-=0);
+      counter.innerHTML = countDown;
       console.log("GameOver the correct number is: " + numberToGuessEM);
       bubbleStatement.style.visibility = "hidden";
       endGameAlert.style.visibility = "visible";
@@ -94,7 +95,8 @@ function startOver(){
   bubbleStatement.style.visibility = "visible";
   endGameAlert.style.visibility = "hidden";
   restart.style.visibility = "hidden";
-  counter.innerHTML = 5;
+  countDown = 5;
+  counter.innerHTML = countDown;
   easyBtn.disabled = false;
   easyInput.disabled = false;
   easyInput.value = "";
