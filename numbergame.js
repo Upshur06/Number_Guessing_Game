@@ -1,3 +1,4 @@
+let header = document.querySelector('h1');
 let quoteBubble = document.getElementById('quoteBubble');
 let easyBtn = document.getElementById('easyBtn');
 let easyInput = document.getElementById('easyInput');
@@ -12,6 +13,7 @@ let numberToGuessEM = 0;
 let counter = document.getElementById('counter');
 let countDown = 5;
 
+header.innerHTML = "Easy Mode";
 
 function easyModeRandomNum(max){
     var number = parseInt(Math.floor(Math.random() * Math.floor(max))+1);
@@ -97,6 +99,8 @@ function startOver(){
   restart.style.visibility = "hidden";
   countDown = 5;
   counter.innerHTML = countDown;
+  numberToGuessEM = 0;
+  easyModeRandomNum(30);
   easyBtn.disabled = false;
   easyInput.disabled = false;
   easyInput.value = "";
