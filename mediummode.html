@@ -3,27 +3,48 @@
   <head>
     <meta charset="utf-8">
     <title>Guessing NumberGame Medium</title>
-    <link rel="stylesheet" type="text/css" href="numbergame.css">
+    <link rel="stylesheet" type="text/css" href="gamemode.css">
   </head>
 
   <body>
 
     <div id="wrapper">
-      <h1>Medium Mode</h1>
+      <div id="container">
+          <h1>Medium Mode</h1>
 
-      <h1>Instructions</h1>
+          <h2>Instructions</h2>
 
-      <div id="mediumInstruction"><p>`I'm thinking of a number between <em id="mediumNum1">number 1</em> and <em id="mediumNum2">number 2</em>. Can you guess what number it is?`</p></div>
+          <div id="secondContainer">
+              <div id="quoteBubble" onload="thoughtBubble()">
+                  <div>
+                    <div id="quouteBubbleText">
 
-      <h2>You will have 5 turns to find the correct answer</h2>
+                    </div>
+                    <div id="endGameAlert" type="number"></div>
+                  </div>
+              </div>
+                <img id="sadFace" src="./Images_Folder/Sad_face_icon.png">
+                  <img id="happyFace" src="./Images_Folder/Happy_face_icon.png">
+                  <img id="thumbsUp" src="./Images_Folder/Thumbs_up_icon.png">
+                <img id="thinkingFace" src="./Images_Folder/Thinking_face_icon.png">
+              </div>
 
-      <input id="mediumInput" type="number">
-      <button id="mediumBtn" type="button">Guess</button>
+              <div class="bottomContainer">
+                <h2>You will have <em id="counter"></em> turns to find the correct answer</h2>
 
-      <p>Type in a number and click Guess</p>
+                <input id="easyInput" type="number">
+                <button id="easyBtn" type="button">Guess</button>
+
+                <p id="message">Type in a number and click Guess</p>
+
+                <button id="restart" onclick="startOver()">Click</button>
+
+                <h5 type="button" onClick="location.href='menu.html'" value="click here">Main Menu</h5>
+
+              </div>
+          </div>
+      </div>
     </div>
-    <br>
-    <h5 type="button" onClick="location.href='menu.html'" value="click here">Main Menu</h5>
     <script src="numbergame.js"></script>
   </body>
 

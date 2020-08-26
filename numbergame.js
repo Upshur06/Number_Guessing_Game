@@ -13,7 +13,7 @@ let numberToGuessEM = 0;
 let counter = document.getElementById('counter');
 let countDown = 5;
 
-header.innerHTML = "Easy Mode";
+// header.innerHTML = "Easy Mode";
 
 function easyModeRandomNum(max){
     var number = parseInt(Math.floor(Math.random() * Math.floor(max))+1);
